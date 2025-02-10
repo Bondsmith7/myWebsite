@@ -1,0 +1,314 @@
+
+
+:root{
+    --theme-color: #e9dfc9;
+    --contrast-color: #642424;
+    --footer-color: #201001;
+    --myFont: 'Nerko One', 'Times New Roman', Times, serif;
+  }
+
+  .nerko-one-regular {
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  body{
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--contrast-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--theme-color);
+  }
+  
+
+
+
+
+  #navbar{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    padding-top: 10px;
+    position: fixed;
+    top: 0;
+    transition: all ease-in-out .1s;
+  }
+
+  .scrolled{
+    background-color: white;
+  }
+  
+  .link-container{
+    list-style: none;
+  }
+  
+  .link-container li{
+    display: inline;
+    padding: 0 20px;
+  }
+  
+  .link-container li:last-child{
+    margin-right: 20px;
+  }
+  
+  .nav-links{
+    text-decoration: none;
+    color: var(--contrast-color);
+    font-weight: 200;
+    font-family: var(--myFont);
+    font-size: 32px;
+    position: relative;
+    z-index: 0;
+  }
+
+  .nav-links::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 40%;
+    background-color: var(--theme-color);
+    border-radius: 7px;
+    top: 20px;
+    z-index: -1;
+  }
+
+  .nav-links:hover::before{
+    width: 100%;
+    transition: all ease-in-out .1s;
+    border: 2px solid white;
+  }
+
+  #my-face{
+    max-width: 100%;
+    max-height: 100%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--contrast-color);
+  }
+
+  #my-face-link{
+    margin-right: auto;
+    margin-left: 20px;
+  }
+  
+  #my-face:hover{
+    border-color: var(--theme-color);
+  }
+
+
+
+
+  
+  #welcome-section{
+    width: 100%;
+    height: 100vh;
+    font-family: var(--myFont);
+    font-weight: normal; 
+    color: var(--contrast-color);
+    text-align: center;
+    background-image: url("img/originalIsrael.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -350px;
+    position: relative;
+    top: 0px;
+    z-index: -1;
+    border: 2px solid transparent;
+  }
+  
+  #welcome-section h1{
+    padding: 20vh 30vh;
+    font-size: 72px;
+  }
+
+
+
+
+
+  #my-journey{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  p{
+    margin: 10px 100px;
+    font-size: x-large;
+    font-family: var(--myFont);
+    text-indent: 30px;
+  }
+
+  p::first-letter{
+    font-size: 2em;
+  }
+
+  table{
+    margin: 20px 150px;
+    font-family: var(--myFont);
+  }
+
+  td{
+    padding: 10px;
+    font-size: larger;
+  }
+  th{
+    font-size: xx-large;
+  }
+  
+  
+
+
+
+  .title{
+    width: 100%;
+    text-align: center;
+    font-family: var(--myFont);
+    font-size: 64px;
+  }
+
+  #resumes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    box-sizing: border-box;
+    background: var(--contrast-color);
+    padding: 50px 50px;
+    margin: 0 auto;
+    color: var(--theme-color);
+  }
+  
+  .resume-tile{
+    height: 25rem;
+    width: 18rem;
+    border: 2px solid var(--theme-color);
+    margin: 10px 20px;
+  }
+
+  #projects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    box-sizing: border-box;
+    background: var(--contrast-color);
+    padding: 70px 50px;
+    margin: 0 auto;
+    color: var(--theme-color);
+  }
+
+  .project-tile{
+    height: 18rem;
+    width: 18rem;
+    border: 2px solid var(--theme-color);
+    margin: 10px 20px;
+  }
+
+  .project-image{
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+    border: 2px solid var(--contrast-color);
+  }
+
+
+
+
+/* CONTACT SECTION */
+
+  #contact {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    font-family: var(--myFont);
+    font-size: large;
+}
+
+h2 {
+    text-align: center;
+    color: var(--contrast-color);
+}
+
+label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: var(--myFont);
+}
+
+input[type="submit"] {
+    background-color: var(--contrast-color);
+    color: var(--theme-color);
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+    background-color: #813838;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.message-box {
+    min-height: 150px;
+}
+
+
+
+
+
+
+
+
+  footer{
+    display: flex;
+    align-items: center;
+    padding: 100px 20px;
+    background-color: var(--footer-color);
+  }
+  footer p{
+    width: auto;
+    margin: auto;
+    color: var(--theme-color);
+  }
+
+
+
+
+  @media (min-width: 1800px){
+    #welcome-section{
+      background-image: url("img/bkimgWide.jpg");
+    }
+    #welcome-section h1{
+      margin-top: 7vh;
+    }
+  }
+
+  @media (max-width: 1000px){
+    #welcome-section{
+      background-image: url("img/bkimgNarrow.jpg");
+    }
+  }
