@@ -183,11 +183,20 @@
     margin: 0 auto;
     color: var(--theme-color);
   }
+
+  iframe {
+    overflow: hidden;
+    width: 300px;
+    height: 400px;
+    scrollbar-width: none;
+  }
+  iframe::-webkit-scroll {
+    display: none;
+  }
   
   .resume-tile{
-    height: 25rem;
-    width: 18rem;
-    border: 2px solid var(--theme-color);
+    height: auto;
+    width: auto;
     margin: 10px 20px;
   }
 
@@ -260,12 +269,13 @@ input[type="submit"] {
     border: none;
     cursor: pointer;
     padding: 12px 20px;
-    font-size: 1em;
+    font-size: 2em;
     border-radius: 4px;
 }
 
 input[type="submit"]:hover {
-    background-color: #813838;
+    background-color: #ffbb00;
+    color: var(--footer-color);
 }
 
 .form-group {

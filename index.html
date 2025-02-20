@@ -127,6 +127,7 @@
       <div id="resume">
         <h1 class="title">Resume</h1>  
           <div class="resume-tile">
+            <iframe src="img/ResumeFeb2025NoContactInfo.pdf"></iframe>
             <a href="Resume-Feb2025.pdf"></a>
           </div>
       </div>
@@ -135,31 +136,39 @@
 
       <div id="contact">
         <h2 class="title">Contact Me</h2>
+        
+        <form action="https://api.web3forms.com/submit" method="POST">
 
-        <form action="/submit-form" method="POST">
-            <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required placeholder="Enter your name">
-            </div>
+          <!-- Replace with your Access Key -->
+          <input type="hidden" name="access_key" value="8e3ffa9a-399d-4158-80da-871e4075aaaf">
 
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required placeholder="Enter your email">
-            </div>
+          <!-- Form Inputs. Each input must have a name="" attribute -->
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+          </div>
 
-            <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" required placeholder="Enter subject">
-            </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+          </div>
 
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" class="message-box" required placeholder="Write your message"></textarea>
-            </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" class="message-box" required placeholder="Write your message"></textarea>
+          </div>
 
-            <div class="form-group">
-                <input type="submit" value="Send Message">
-            </div>
+          <!-- Honeypot Spam Protection -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+          <!-- Custom Confirmation / Success Page -->
+          <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html">
+
+          <div class="form-group">
+            <input type="submit"></input> <!-- might need to change this back to button not input-->
+          </div>
+
+
         </form>
       </div>
 
